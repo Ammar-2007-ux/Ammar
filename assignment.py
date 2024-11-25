@@ -9,4 +9,10 @@ import matplotlib.pyplot as plt
 DATA_FILE = "finance_data.csv"
 
 
+# Initialize the main window
+window = tk.Tk()
+window.geometry("600x800")
+window.title("Finance Tracker")
+
+
 
