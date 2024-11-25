@@ -15,4 +15,14 @@ window.geometry("600x800")
 window.title("Finance Tracker")
 
 
+# Utility functions
+def initialize_file():
+    """Initialize the CSV file if it doesn't exist."""
+    try:
+        with open(DATA_FILE, "x") as file:
+            writer = csv.writer(file)
+            writer.writerow(["Date", "Income", "Expense", "Category"])
+    except FileExistsError:
+        pass
+
 
