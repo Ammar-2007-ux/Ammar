@@ -26,3 +26,21 @@ def initialize_file():
         pass
 
 
+def load_transactions():
+    # Load transactions from the CSV file.
+    transactions = []
+    try:
+        with open(DATA_FILE, "r") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                transactions.append({
+                    "Date": row["Date"],
+                    "Income": float(row["Income"]),
+                    "Expense": float(row["Expense"]),
+                    "Category": row["Category"]
+                })
+    except FileNotFoundError:
+        initialize_file()
+    except Exception as e:
+        messagebox.showerror("Error", f"Error loading data: {e}")
+    return transactions
