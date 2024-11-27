@@ -128,3 +128,19 @@ def sort_and_display(key):
             categories[t["Category"]] += t["Expense"]
         else:
             categories[t["Category"]] = t["Expense"]
+ if categories:
+        plt.pie(categories.values(), labels=categories.keys(), autopct="%1.1f%%")
+        plt.title("Expense Distribution")
+        plt.show()
+    else:
+        messagebox.showinfo("No Data", "No expenses to visualize.")
+
+
+# GUI Layout
+# Title
+label = tk.Label(window, text="Finance Tracker", font=("Bold", 18))
+label.pack(pady=20)
+
+# Input Frame
+input_frame = ttk.Frame(window)
+input_frame.pack(pady=10)
