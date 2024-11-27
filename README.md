@@ -1,7 +1,7 @@
 # APP NAME
 FINANCE TRACKER
 # GitHub Repository
-The source code for this project is available on GitHub: https://github.com/xxyy
+The source code for this project is available on GitHub: https://github.com/Ammar-2007-ux/Ammar
 
 ## Identification
 - **Name:** Ammar
