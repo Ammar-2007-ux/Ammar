@@ -52,3 +52,6 @@ def save_transaction(income, expense, category):
             writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S"), income, expense, category])
     except Exception as e:
         messagebox.showerror("Error", f"Error saving data: {e}")
+def sort_transactions(transactions, key):
+    # Sort transactions by a given key
+    return sorted(transactions, key=lambda x: x[key])
