@@ -44,3 +44,11 @@ def load_transactions():
     except Exception as e:
         messagebox.showerror("Error", f"Error loading data: {e}")
     return transactions
+def save_transaction(income, expense, category):
+    # Save a transaction to the CSV file.
+    try:
+        with open(DATA_FILE, "a", newline="") as file:
+            writer = csv.writer(file)
+            writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S"), income, expense, category])
+    except Exception as e:
+        messagebox.showerror("Error", f"Error saving data: {e}")
