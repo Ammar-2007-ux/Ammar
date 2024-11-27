@@ -107,3 +107,15 @@ def sort_and_display(key):
     if not category:
         messagebox.showerror("Error", "Please enter a category to search!")
         return
+    transactions = load_transactions()
+    results = search_transactions(transactions, category)
+    if not results:
+        messagebox.showinfo("No Results", f"No transactions found for category '{category}'.")
+    else:
+        text_area.delete(1.0, tk.END)
+        text_area.insert(tk.END, f"{'Date':<20}{'Income':<10}{'Expense':<10}{'Category'}\n")
+        text_area.insert(tk.END, "-" * 50 + "\n")
+        for t in results:
+            text_area.insert(
+                tk.END, f"{t['Date']:<20}{t['Income']:<10}{t['Expense']:<10}{t['Category']}\n"
+            )
