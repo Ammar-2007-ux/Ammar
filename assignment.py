@@ -119,3 +119,12 @@ def sort_and_display(key):
             text_area.insert(
                 tk.END, f"{t['Date']:<20}{t['Income']:<10}{t['Expense']:<10}{t['Category']}\n"
             )
+            def visualize_expenses():
+    # Visualize expenses by category using a pie chart.
+    transactions = load_transactions()
+    categories = {}
+    for t in transactions:
+        if t["Category"] in categories:
+            categories[t["Category"]] += t["Expense"]
+        else:
+            categories[t["Category"]] = t["Expense"]
