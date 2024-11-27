@@ -1,56 +1,31 @@
 # APP NAME
-
+FINANCE TRACKER
 # GitHub Repository
 The source code for this project is available on GitHub: https://github.com/xxyy
 
 ## Identification
-- **Name:** 
-- **P-number:** 
-- **Course code:** 
+- **Name:** Ammar
+- **P-number:** p457606
+- **Course code:**  IY499
 
 ## Declaration of Own Work
 I confirm that this assignment is my own work.
-Where I have referred to academic sources, I have provided in-text citations and included the sources in the final reference list.
+Where I have referred to academic sources, I have provided in-text citations and included the sources in the final reference list. YES
 
 ## Introduction
-This code represents a simple implementation of the xx using the xx library. The game consists of xxyy
+This code represents a simple implementation of FINANCE TRACKER using the TKINTER library. IT enables the user to add transactions and track all the expenses used and sorting them however the user pleases.
 
 ## Installation
-To run the game, ensure you have Python installed, and then install the required dependencies from the `requirements.txt` file using the following command:
+to run the app matplotlib has to have been installed and python and then just run the applocation
 ```bash
 pip install -r requirements.txt
 ```
-
-## How to Play
-- Press the x key to do xxyy.
-- xxyy
-
-### Running the Game
-```python
-python main.py
-```
-
-### Running Unit Tests
-```python
-python UnitTest.py
-```
-
-## Game Elements
-- xxyy 
-- xxyy 
-
+I am using matplotblib to display the transactions that have been made in a percentage.
 ## Libraries Used
 The following libraries are used in this project:
-- Pygame
+- MATPLOTLIB
 - xxyy
 
 ## Project Structure
 - `ErrorHandling/`: Contains classes for handling various errors.
 xxyy
-
-## Unit Tests (optional)
-The project includes xxyy
-
-To run the unit tests, navigate to the project directory and xxyy
-
-This will run all the test cases defined in the `UnitTest.py` file.
