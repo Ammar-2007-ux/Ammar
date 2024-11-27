@@ -55,3 +55,6 @@ def save_transaction(income, expense, category):
 def sort_transactions(transactions, key):
     # Sort transactions by a given key
     return sorted(transactions, key=lambda x: x[key])
+def search_transactions(transactions, category):
+    # Search transactions by category
+    return [t for t in transactions if t["Category"].lower() == category.lower()]
