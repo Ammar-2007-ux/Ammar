@@ -179,3 +179,6 @@ search_entry = ttk.Entry(sort_frame)
 search_entry.grid(row=1, column=1)
 search_button = tk.Button(sort_frame, text="Search", command=search_and_display)
 search_button.grid(row=1, column=2, padx=5)
+# Visualization Button
+visualize_button = tk.Button(window, text="Visualize Expenses", command=visualize_expenses)
+visualize_button.pack(pady=10)
