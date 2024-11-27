@@ -58,3 +58,25 @@ def sort_transactions(transactions, key):
 def search_transactions(transactions, category):
     # Search transactions by category
     return [t for t in transactions if t["Category"].lower() == category.lower()]
+def add_transaction():
+    # Add a new transaction.
+    income = income_entry.get()
+    expense = expense_entry.get()
+    category = category_dropdown.get()
+
+    if not (income or expense) or category == "Select Category":
+        messagebox.showerror("Error", "Please fill all fields!")
+        return
+
+    try:
+        income = float(income) if income else 0.0
+        expense = float(expense) if expense else 0.0
+        save_transaction(income, expense, category)
+        income_entry.delete(0, tk.END)
+        expense_entry.delete(0, tk.END)
+        category_dropdown.set("Select Category")
+        display_transactions()
+        messagebox.showinfo("Success", "Transaction added successfully!")
+    except ValueError:
+        messagebox.showerror("Error", "Income and Expense must be numeric values!")
+
