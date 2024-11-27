@@ -182,3 +182,7 @@ search_button.grid(row=1, column=2, padx=5)
 # Visualization Button
 visualize_button = tk.Button(window, text="Visualize Expenses", command=visualize_expenses)
 visualize_button.pack(pady=10)
+# Initialize and Run
+initialize_file()
+display_transactions()
+window.mainloop()
