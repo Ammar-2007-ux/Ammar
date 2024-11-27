@@ -24,7 +24,7 @@ I am using matplotblib to display the transactions that have been made in a perc
 ## Libraries Used
 The following libraries are used in this project:
 - MATPLOTLIB
-- xxyy
+  
 
 ## Project Structure
 - `ErrorHandling/`: Contains classes for handling various errors.
