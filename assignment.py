@@ -90,3 +90,14 @@ def display_transactions():
         text_area.insert(
             tk.END, f"{t['Date']:<20}{t['Income']:<10}{t['Expense']:<10}{t['Category']}\n"
         )
+def sort_and_display(key):
+    # Sort transactions and display them.
+    transactions = load_transactions()
+    sorted_transactions = sort_transactions(transactions, key)
+    text_area.delete(1.0, tk.END)
+    text_area.insert(tk.END, f"{'Date':<20}{'Income':<10}{'Expense':<10}{'Category'}\n")
+    text_area.insert(tk.END, "-" * 50 + "\n")
+    for t in sorted_transactions:
+        text_area.insert(
+            tk.END, f"{t['Date']:<20}{t['Income']:<10}{t['Expense']:<10}{t['Category']}\n"
+        )
