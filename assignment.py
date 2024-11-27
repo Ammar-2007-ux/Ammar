@@ -174,3 +174,8 @@ sort_expense_button = tk.Button(sort_frame, text="Expense", command=lambda: sort
 sort_expense_button.grid(row=0, column=2, padx=5)
 sort_date_button = tk.Button(sort_frame, text="Date", command=lambda: sort_and_display("Date"))
 sort_date_button.grid(row=0, column=3, padx=5)
+tk.Label(sort_frame, text="Search by Category:").grid(row=1, column=0, padx=10, pady=10)
+search_entry = ttk.Entry(sort_frame)
+search_entry.grid(row=1, column=1)
+search_button = tk.Button(sort_frame, text="Search", command=search_and_display)
+search_button.grid(row=1, column=2, padx=5)
