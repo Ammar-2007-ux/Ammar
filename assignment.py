@@ -80,3 +80,13 @@ def add_transaction():
     except ValueError:
         messagebox.showerror("Error", "Income and Expense must be numeric values!")
 
+def display_transactions():
+    # Display all transactions in the text area
+    transactions = load_transactions()
+    text_area.delete(1.0, tk.END)
+    text_area.insert(tk.END, f"{'Date':<20}{'Income':<10}{'Expense':<10}{'Category'}\n")
+    text_area.insert(tk.END, "-" * 50 + "\n")
+    for t in transactions:
+        text_area.insert(
+            tk.END, f"{t['Date']:<20}{t['Income']:<10}{t['Expense']:<10}{t['Category']}\n"
+        )
