@@ -144,3 +144,19 @@ label.pack(pady=20)
 # Input Frame
 input_frame = ttk.Frame(window)
 input_frame.pack(pady=10)
+tk.Label(input_frame, text="Income:").grid(row=0, column=0, padx=10, pady=5)
+income_entry = ttk.Entry(input_frame)
+income_entry.grid(row=0, column=1)
+
+tk.Label(input_frame, text="Expense:").grid(row=1, column=0, padx=10, pady=5)
+expense_entry = ttk.Entry(input_frame)
+expense_entry.grid(row=1, column=1)
+
+tk.Label(input_frame, text="Category:").grid(row=2, column=0, padx=10, pady=5)
+categories = ["Food", "Rent", "Utilities", "Entertainment", "Other"]
+category_dropdown = ttk.Combobox(input_frame, values=categories)
+category_dropdown.grid(row=2, column=1)
+category_dropdown.set("Select Category")
+
+add_button = tk.Button(window, text="Add Transaction", command=add_transaction)
+add_button.pack(pady=10)
