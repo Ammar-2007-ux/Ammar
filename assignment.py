@@ -160,3 +160,10 @@ category_dropdown.set("Select Category")
 
 add_button = tk.Button(window, text="Add Transaction", command=add_transaction)
 add_button.pack(pady=10)
+# Transaction Display
+text_area = tk.Text(window, font=("Arial", 12), height=10, width=70)
+text_area.pack(pady=10)
+
+# Sorting and Searching
+sort_frame = ttk.Frame(window)
+sort_frame.pack(pady=10)
